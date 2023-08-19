@@ -1,10 +1,12 @@
+import { MainType } from "../types/myTypes";
+
 const ControlButtons = ({
   isRunning,
   isPaused,
   pauseTimer,
   startTimer,
   resetTimer,
-}) => {
+}: MainType): JSX.Element => {
   const StartButton = (
     <button className="btn-start" onClick={startTimer}>
       Iniciar

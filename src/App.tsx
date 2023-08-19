@@ -1,4 +1,3 @@
-import React from "react";
 import "./App.css";
 import MyHook from "./contexts/MyHook";
 import Timer from "./components/Timer";
@@ -22,6 +21,7 @@ function App() {
       <ControlButtons
         isRunning={isRunning}
         isPaused={isPaused}
+        elapsedTime={elapsedTime}
         pauseTimer={pauseTimer}
         startTimer={startTimer}
         resetTimer={resetTimer}

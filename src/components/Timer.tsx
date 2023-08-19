@@ -1,8 +1,12 @@
-const Timer = ({ elapsedTime }) => {
-  const hours = Math.floor(elapsedTime / 360000);
-  const minutes = Math.floor(elapsedTime / 60000);
-  const seconds = Math.floor((elapsedTime % 60000) / 1000);
-  const milliseconds = (elapsedTime / 10) % 100;
+type TimerCount = {
+  elapsedTime: number;
+};
+
+const Timer = ({ elapsedTime }: TimerCount): JSX.Element => {
+  const hours: number = Math.floor(elapsedTime / 360000);
+  const minutes: number = Math.floor(elapsedTime / 60000);
+  const seconds: number = Math.floor((elapsedTime % 60000) / 1000);
+  const milliseconds: number = (elapsedTime / 10) % 100;
 
   // if (elapsedTime === 1000) {
   //   console.log("chegou a 1 segundo");

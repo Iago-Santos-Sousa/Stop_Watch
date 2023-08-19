@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
+import { MainType } from "../types/myTypes";
 
-const MyHook = () => {
-  const [isRunning, setIsRunning] = useState(false);
-  const [isPaused, setIsPaused] = useState(true);
-  const [elapsedTime, setElapsedTime] = useState(0);
+const MyHook = (): MainType => {
+  const [isRunning, setIsRunning] = useState<boolean>(false);
+  const [isPaused, setIsPaused] = useState<boolean>(true);
+  const [elapsedTime, setElapsedTime] = useState<number>(0);
 
   useEffect(() => {
-    let interval;
+    let interval: ReturnType<typeof setInterval> | undefined;
 
     if (isRunning && isPaused === false) {
       interval = setInterval(() => {
@@ -19,17 +20,17 @@ const MyHook = () => {
     return () => clearInterval(interval);
   }, [isRunning, isPaused]);
 
-  const startTimer = () => {
+  const startTimer = (): void => {
     setIsRunning(true);
     setIsPaused(false);
   };
 
-  const pauseTimer = () => {
+  const pauseTimer = (): void => {
     // setIsRunning(false);
     setIsPaused(!isPaused);
   };
 
-  const resetTimer = () => {
+  const resetTimer = (): void => {
     setIsRunning(false);
     setElapsedTime(0);
   };
