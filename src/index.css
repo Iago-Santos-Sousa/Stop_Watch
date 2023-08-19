@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  background-color: #ffe5e5;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.App {
+  border: 1px solid #e5e7eb;
+  border-radius: 21px;
+  width: max(20%, 25%, 30%, 300px);
+  padding: 0 1rem 1.5rem;
+  background-color: #ffbfbf;
+  box-shadow: #0000003d 0 3px 8px;
+}
+
+h1 {
+  font-weight: 800;
+  color: #fff;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 3rem;
+  padding: 1rem 0;
+  font-weight: lighter;
+}
+
+.controlButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.mil-seconds {
+  font-size: 22px;
+  align-self: flex-end;
+  transform: translateY(-5px);
+}
+
+span {
+  display: block;
+}
+
+button {
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+  width: 10rem;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+}
+
+.btn-start {
+  background-color: #18b4f7;
+  border: 1px solid #18b4f7;
+}
+
+.btn-resume {
+  background-color: #f4c152;
+  border: 1px solid #f4c152;
+}
+
+.btn-active {
+  background-color: #2bd4bd;
+  border: 1px solid #2bd4bd;
+}
+
+.btn-reset {
+  background-color: #fb6f84;
+  border: 1px solid #fb6f84;
+}
+
+button:hover {
+  border-color: #279eff;
+}
